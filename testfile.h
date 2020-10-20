@@ -32,7 +32,7 @@ class GenStack{
         // cout << "ERROR FULL STACK" << endl;
         // exit(EXIT_FAILURE);
         resize();
-      }
+      
       myArray[++top] = data;
     }
 
@@ -50,7 +50,7 @@ class GenStack{
 
     bool isFull(){
       return(top == maxSize-1);
-    }
+    } //ERROR HERE
 
     bool isEmpty(){
       return(top == -1);

@@ -1,28 +1,26 @@
-#include "GenStack.h"
+#include "SyntaxChecker.h"
 
 int main(int argc, char **argv){
-  GenStack<char> *stack = new GenStack<char>();
-  // cout << stack->top << endl;
-  // cout << stack->maxSize << endl;
+  // GenStack<char> *stack = new GenStack<char>();
   // stack->push('h');
-  // stack->push('o');
-  // stack->push('o');
-  // cout << stack->pop() << endl;
-  // cout << stack->pop() << endl;
-  // cout << stack->pop() << endl;
-  stack->push('h');
-  cout << stack->maxSize << endl;
-  stack->push('e');
-  cout << stack->maxSize << endl;
-  stack->push('l');
-  cout << stack->maxSize << endl;
-  stack->push('1');
-  cout << stack->maxSize << endl;
-  stack->push('0');
-  cout << stack->maxSize << endl;
+  // cout << stack->top << endl;
+  // stack->push('e');
+  // cout << stack->top << endl;
   // stack->push('l');
+  // cout << stack->top << endl;
   // stack->push('1');
+  // cout << stack->top << endl;
   // stack->push('0');
-  // cout << stack->pop() << endl;
-  stack->printStack();
+  // cout << stack->top << endl;
+  // stack->printStack();
+  if(argc != 2){
+    cout << "command line requires a file input" << endl;
+    cout << "example: " << endl;
+    cout << "'./assignment3.exe main.cpp'" << endl;
+  }
+  else{
+    SyntaxChecker *checker1 = new SyntaxChecker(argv[1]);
+    checker1->run();
+  }
+  return 0;
 }
