@@ -28,11 +28,11 @@ class GenStack{
     }//destructor
 
     void push(T data){
-      if(isFull()){
+      if(isFull())[
         // cout << "ERROR FULL STACK" << endl;
         // exit(EXIT_FAILURE);
         resize();
-      
+      }
       myArray[++top] = data;
     }
 
@@ -58,13 +58,6 @@ class GenStack{
 
     int getSize(){
       return top + 1;
-    }
-
-    void printStack(){
-      for(int i = 0; i < maxSize; ++i){
-        cout << myArray[i];
-      }
-      cout << endl;
     }
 
     void popStack(){
